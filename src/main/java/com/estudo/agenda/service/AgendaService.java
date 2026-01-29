@@ -25,15 +25,15 @@ public class AgendaService {
     }
     
     public AgendaDto salvarAgendamento(AgendaDto dto){
-        
+
         if (agendaRepository.existsByCpf(dto.getCpf())) {
             throw new RuntimeException("CPF já cadastrado no sistema");
         }
-        //transforma dto em entity
+        
         Agenda entity = converterParaEntity(dto);
-        //salvo entity e recebo ele atualizado com o id
+        
         Agenda entitySalva = agendaRepository.save(entity);
-        //transformo o entity em dto para responder
+        
         return converterParaDto(entitySalva);
     }
 
