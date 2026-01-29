@@ -43,12 +43,12 @@ Certifique-se de ter instalado:
    git clone [https://github.com/SEU_USUARIO/agenda-api.git](https://github.com/SEU_USUARIO/agenda-api.git)
 
 2. Entre na pasta do projeto:
-
-cd agenda-api
+    ```bash
+    cd agenda-api
 
 3. Compile e rode o projeto usando o Maven Wrapper:
-
-./mvnw spring-boot:run
+    ```bash
+    ./mvnw spring-boot:run
 
 A API estará disponível em http://localhost:8080.
 
@@ -56,24 +56,24 @@ A API estará disponível em http://localhost:8080.
 O projeto está configurado para usar o banco de dados H2, que roda em memória. Para acessar o console do banco e visualizar as tabelas, utilize as configurações abaixo no seu arquivo src/main/resources/application.properties:
 
 # H2 Console
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
+    spring.h2.console.enabled=true
+    spring.h2.console.path=/h2-console
 
 # Datasource
-spring.datasource.url=jdbc:h2:mem:agendadb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.ddl-auto=update
+    spring.datasource.url=jdbc:h2:mem:agendadb
+    spring.datasource.driverClassName=org.h2.Driver
+    spring.datasource.username=sa
+    spring.datasource.password=
+    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+    spring.jpa.hibernate.ddl-auto=update
 
 Acesso ao Console: Após rodar a aplicação, acesse http://localhost:8080/h2-console. No campo JDBC URL, coloque jdbc:h2:mem:agendadb.
 
 ### 🧪 Testes
 Para garantir a qualidade, o projeto conta com testes unitários na camada de Service. Para rodar todos os testes, execute:
 
-./mvnw test
-
+    ./mvnw test
+    
 ### 📌 Diferenciais Implementados
 Validação de CPF: Impede o cadastro de contatos com o mesmo CPF.
 
