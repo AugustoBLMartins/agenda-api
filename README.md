@@ -28,6 +28,7 @@ graph LR
     D -->|Entity| C
     C -->|Conversão DTO| B
     B -->|JSON/DTO| A
+```
 
 ## 🚀 Como Rodar o Projeto
 
