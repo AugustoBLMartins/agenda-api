@@ -78,8 +78,8 @@ class AgendaServiceTest {
     @Test
     @DisplayName("Deve deletar o registro com sucesso")
     void deletarComSucesso(){
-            // 1. CENÁRIO
-        Long idParaDeletar = 10L; // O 'L' de Long
+    
+        Long idParaDeletar = 10L;
         Agenda agendaFake = new Agenda();
         agendaFake.setId(idParaDeletar);
         agendaFake.setNome("Augusto");
